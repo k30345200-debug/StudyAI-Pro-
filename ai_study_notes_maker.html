@@ -666,6 +666,10 @@ function showToast(msg){
   const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
   setTimeout(()=>t.classList.remove('show'),2800);
 } 
+  function formatSize(bytes){
+  if(bytes<1024) return bytes+'B'
+  return (bytes/(1024*1024)).toFixed(1)+'MB';
+  }
 </script>
 </body>
 </html>
